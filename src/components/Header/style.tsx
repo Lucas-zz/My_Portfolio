@@ -22,7 +22,7 @@ const Logo = styled.div`
     & > a {
         font-family: "Abel", sans-serif;
 
-        font-size: 32px;
+        font-size: calc((2 - 1) * 1.2vw + 1rem);
         font-weight: 400;
         line-height: 34px;
         color: #111;
@@ -54,7 +54,7 @@ const Menu = styled.div`
         align-items: center;
 
 
-        font-size: 16px;
+        font-size: calc((1 - 1) * 1.2vw + 1rem);
         font-weight: 300;
         line-height: 24px;
         color: #111;

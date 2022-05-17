@@ -24,7 +24,7 @@ const Container = styled.footer`
 `;
 
 const Logo = styled.div`
-    width: 30%;
+    width: 20%;
 
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@ const Logo = styled.div`
     align-items: flex-start;
 
     h3 {        
-        font-size: 32px;
+        font-size: calc((2.2 - 1) * 1.2vw + 1rem);
         font-weight: 400;
         line-height: 34px;
         color: #111;
@@ -41,7 +41,7 @@ const Logo = styled.div`
     }
 
     p {
-        font-size: 16px;
+        font-size: calc((.9 - 1) * 1.2vw + 1rem);
         font-weight: 300;
         line-height: 24px;
         color: #111;
@@ -51,26 +51,26 @@ const Logo = styled.div`
 `;
 
 const CurrentAddress = styled.p`
-    width: 25%;
+    width: 30%;
     
     display: flex;
     justify-content: center;
     align-items: center;
 
-    font-size: 16px;
+    font-size: calc((1 - 1) * 1.2vw + 1rem);
     font-weight: 300;
     line-height: 24px;
     color: #111;
 `;
 
 const ContactInfo = styled.p`
-    width: 25%;
+    width: 30%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    font-size: 16px;
+    font-size: calc((1 - 1) * 1.2vw + 1rem);
     font-weight: 300;
     line-height: 24px;
     color: #111;
@@ -94,7 +94,7 @@ const Socials = styled.div`
             display: flex;
             align-items: center;
 
-            padding-left: 15px;
+            padding-left: .5vw;
         }
     }
 `;
