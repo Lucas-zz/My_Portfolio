@@ -1,11 +1,14 @@
 import { ContactInfo, Container, CurrentAddress, Logo, Socials } from "./style";
 import { LinkedIn, Twitter, GitHub } from '@mui/icons-material';
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
         <Container>
             <Logo>
-                <h3 title="Lucas Azzolini Vieira">L.A.V.</h3>
+                <Link to="/">
+                    <h3 title="Lucas Azzolini Vieira">L.A.V.</h3>
+                </Link>
                 <p>Made with React</p>
             </Logo>
             <CurrentAddress title="Entre em contato comigo para mais informações">

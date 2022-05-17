@@ -12,6 +12,8 @@ const Container = styled.footer`
 
     margin: 0 auto;
 
+    background-color: #FFF;
+
     h3 {
         font-family: "Abel", sans-serif;
     }
@@ -40,7 +42,7 @@ const Logo = styled.div`
 
     p {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 24px;
         color: #111;
 
@@ -56,7 +58,7 @@ const CurrentAddress = styled.p`
     align-items: center;
 
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 24px;
     color: #111;
 `;
@@ -69,7 +71,7 @@ const ContactInfo = styled.p`
     align-items: center;
 
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 24px;
     color: #111;
 `;
@@ -91,6 +93,8 @@ const Socials = styled.div`
         & > a {
             display: flex;
             align-items: center;
+
+            padding-left: 15px;
         }
     }
 `;
