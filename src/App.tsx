@@ -2,8 +2,23 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AlertProvider } from './contexts/alertContext';
 import { GlobalStyle } from "./style/reset";
-import { IntroPage, AboutMePage, ProjectPage, ContactPage } from './pages';
 import Header from './components/Header';
+import { Suspense, lazy } from "react";
+
+const Loading = () => (
+	<div>Loading...</div>
+);
+
+const LazyWrapper = (Component: any) => (props: any) => (
+	<Suspense fallback={<Loading />}>
+		<Component {...props} />
+	</Suspense>
+);
+
+const IntroPage = LazyWrapper(lazy(() => import("./pages/IntroPage")));
+const AboutMePage = LazyWrapper(lazy(() => import("./pages/AboutMePage")));
+const ProjectPage = LazyWrapper(lazy(() => import("./pages/ProjectPage")));
+const ContactPage = LazyWrapper(lazy(() => import("./pages/ContactPage")));
 
 function App() {
 	return (
