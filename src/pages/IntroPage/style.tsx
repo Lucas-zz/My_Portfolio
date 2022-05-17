@@ -13,7 +13,7 @@ const Navigator = styled.section`
     justify-content: center;
     align-items: center;
 
-    background-image: url(https://blog.imgur.com/wp-content/uploads/2016/05/naa3bIG.gif);
+    background-image: url(https://raw.githubusercontent.com/Lucas-zz/My_Portfolio/main/src/assets/coffee_background.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
