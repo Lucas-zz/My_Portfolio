@@ -7,7 +7,9 @@ const Container = styled.header`
     justify-content: space-between;
     align-items: center;
 
-    padding: 1.5vw 4vw;
+    padding: 2.3vw 4vw;
+
+    background-color: #FFF;
 `;
 
 const Logo = styled.div`
@@ -17,16 +19,18 @@ const Logo = styled.div`
     justify-content: flex-start;
     align-items: center;
 
-    font-family: "Abel", sans-serif;
+    & > a {
+        font-family: "Abel", sans-serif;
 
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 34px;
-    color: #111;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 34px;
+        color: #111;
 
-    padding: 0;
+        padding: 0;
 
-    cursor: pointer;
+        cursor: pointer;
+    }
 `;
 
 const MenuContainer = styled.div`
@@ -51,7 +55,7 @@ const Menu = styled.div`
 
 
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 24px;
         color: #111;
 
@@ -69,12 +73,14 @@ const Menu = styled.div`
         justify-content: flex-end;
         align-items: center;
 
-        padding: 0;
+        padding: 0 10px;
 
         & > a {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            padding-left: 10px;
         }
     }
 `;

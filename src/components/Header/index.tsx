@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <Container>
             <Logo title="Lucas Azzolini Vieira">
-                L.A.V.
+                <Link to="/">L.A.V.</Link>
             </Logo>
             <MenuContainer>
                 <Menu>
@@ -16,10 +16,10 @@ export default function Header() {
                         <Link to="/contact">Contato</Link>
                         <div>
                             <a href="https://www.linkedin.com/in/azzolinilucas/" title="LinkedIn">
-                                <LinkedIn sx={{ fontSize: 36, color: "#111" }} />
+                                <LinkedIn sx={{ fontSize: 28, color: "#111" }} />
                             </a>
                             <a href="https://github.com/Lucas-zz" title="GitHub">
-                                <GitHub sx={{ fontSize: 36, color: "#111" }} />
+                                <GitHub sx={{ fontSize: 28, color: "#111" }} />
                             </a>
                         </div>
                     </nav>
