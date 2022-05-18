@@ -4,6 +4,8 @@ import { AlertProvider } from './contexts/alertContext';
 import { GlobalStyle } from "./style/reset";
 import Header from './components/Header';
 import { Suspense, lazy } from "react";
+import { CssBaseline } from "@mui/material";
+import Alert from "./components/Alert";
 
 const Loading = () => (
 	<div>Loading...</div>
@@ -24,6 +26,7 @@ function App() {
 	return (
 		<>
 			<GlobalStyle />
+			<CssBaseline />
 			<AlertProvider>
 				<BrowserRouter>
 					<Header />
@@ -34,6 +37,7 @@ function App() {
 						<Route path="/contact" element={<ContactPage />} />
 					</Routes>
 				</BrowserRouter>
+				<Alert />
 			</AlertProvider>
 		</>
 	);
