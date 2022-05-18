@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 const Container = styled.main`
     width: 100%;
-    height: 100vh;
-    background-color: #3F61D7;
+    min-height: 100vh;
+
+    margin: 0 auto;
 `;
 
 export { Container }
