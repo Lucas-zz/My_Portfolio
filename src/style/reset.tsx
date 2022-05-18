@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
 	    box-sizing: border-box;
 	    padding: 0;
 	    margin: 0;
-        font-family: Raleway;
     }
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,8 +32,6 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         line-height: 1;
-        font-family: Raleway;
-        background-color: #EAEDED;
         -ms-overflow-style: none;
         scrollbar-width: none;
         overflow-y: scroll;
