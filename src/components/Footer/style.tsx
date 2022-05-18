@@ -12,7 +12,7 @@ const Container = styled.footer`
 
     margin: 0 auto;
 
-    background-color: #FFF;
+    background-color: #EAEDED;
 
     h3 {
         font-family: "Abel", sans-serif;
@@ -90,11 +90,21 @@ const Socials = styled.div`
         justify-content: flex-end;
         align-items: center;
 
+
+
         & > a {
             display: flex;
             align-items: center;
 
             padding-left: .5vw;
+
+            will-change: transform;
+            transition: transform 450ms;
+
+            :hover {
+                transition: transform 250ms;
+                transform: translateX(1.5px) translateY(-1.5px);
+            }            
         }
     }
 `;

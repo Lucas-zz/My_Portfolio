@@ -9,7 +9,7 @@ const Container = styled.header`
 
     padding: 2.3vw 4vw;
 
-    background-color: #FFF;
+    background-color: #EAEDED;
 `;
 
 const Logo = styled.div`
@@ -81,6 +81,14 @@ const Menu = styled.div`
             align-items: center;
 
             padding-left: 10px;
+
+            will-change: transform;
+            transition: transform 450ms;
+
+            :hover {
+                transition: transform 250ms;
+                transform: translateX(1px) translateY(-1px);
+            }
         }
     }
 `;
