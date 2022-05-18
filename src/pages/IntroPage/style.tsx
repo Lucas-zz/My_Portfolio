@@ -7,7 +7,7 @@ const Container = styled.main`
 
 const Navigator = styled.section`
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ const Navigator = styled.section`
     filter: brightness(0.8) contrast(1.1);
 
     div {
-        width: 80%;
+        width: 70%;
 
         display: flex;
         flex-direction: column;
@@ -32,7 +32,7 @@ const Navigator = styled.section`
         
         margin: 0 auto;
 
-        a {
+        & > a {
             font-family: "Abel", sans-serif; 
             font-size: calc((4 - 1) * 1.2vw + 1rem);
             font-weight: 400;
@@ -47,12 +47,19 @@ const Navigator = styled.section`
             text-decoration-style: solid;
             text-decoration-thickness: 1.5px;
             text-underline-offset: 1rem;
+            text-align: left;
 
-            text-shadow: .6px .6px #111;
+            text-shadow: 1.5px .5px #111;
 
             color: #FFF;
 
+            will-change: transform;
+            transition: transform 450ms;
+
             :hover {
+                transition: transform 125ms;
+                transform: translate(10px);
+                
                 filter: brightness(1.5);
             }
         }
