@@ -6,9 +6,11 @@ import Header from './components/Header';
 import { Suspense, lazy } from "react";
 import { CssBaseline } from "@mui/material";
 import Alert from "./components/Alert";
+import Load from "./components/Load";
+import Footer from "./components/Footer";
 
 const Loading = () => (
-	<div>Loading...</div>
+	<Load />
 );
 
 const LazyWrapper = (Component: any) => (props: any) => (
@@ -36,6 +38,7 @@ function App() {
 						<Route path="/projects" element={<ProjectPage />} />
 						<Route path="/contact" element={<ContactPage />} />
 					</Routes>
+					<Footer />
 				</BrowserRouter>
 				<Alert />
 			</AlertProvider>
