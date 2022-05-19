@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const Container = styled.main`
-    width: 100%;
+    width: 100vw;
 
-    margin: 0 auto;
+    padding-left: 20vw;
+    padding-right: 20vw;
 `;
 
 export { Container }
