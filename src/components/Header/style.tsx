@@ -25,11 +25,16 @@ const Logo = styled.div`
         font-size: calc((2 - 1) * 1.2vw + 1rem);
         font-weight: 400;
         line-height: 34px;
-        color: #111;
-
+        
         padding: 0;
-
+        
         cursor: pointer;
+
+        color: #111;
+        
+        :hover {
+            color: #333;
+        }
     }
 `;
 
@@ -64,7 +69,7 @@ const Menu = styled.div`
             
             :hover {
                 text-decoration: underline;
-            } 
+            }
         }
     }
 
@@ -88,6 +93,21 @@ const Menu = styled.div`
             :hover {
                 transition: transform 250ms;
                 transform: translateX(1px) translateY(-1px);
+            }
+
+            & > *{
+                color: #111;
+
+                :hover {
+                    color: #333;
+                }
+            }
+
+            :first-child > * {
+                :hover {
+                    transition: 150ms;
+                    color: #0072b1;
+                }
             }
         }
     }
