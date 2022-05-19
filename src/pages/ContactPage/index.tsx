@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Grid, TextField, Typography, } from "@mui/material";
-import Footer from "../../components/Footer";
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import useAlert from "../../hooks/useAlert";
 import { Container } from "./style";
 import emailjs from "@emailjs/browser";
@@ -60,74 +59,71 @@ export default function ContactPage() {
     }
 
     return (
-        <>
-            <Container>
-                <Form onSubmit={handleSubmit}>
-                    <Box sx={styles.container}>
-                        <Typography sx={styles.title} variant="h4" component="h1">
-                            Get in touch.
-                        </Typography>
-                        <Grid container xs={12}>
-                            <Grid item xs={6} sx={{ pr: "5px" }}>
-                                <TextField
-                                    name="firstname"
-                                    sx={{ mb: "16px" }}
-                                    label="First Name"
-                                    variant="outlined"
-                                    onChange={handleInputChange}
-                                    value={emailData?.firstname}
-                                    fullWidth
-                                />
-                            </Grid>
-                            <Grid item xs={6} sx={{ pl: "5px" }}>
-                                <TextField
-                                    name="lastname"
-                                    sx={{ mb: "16px" }}
-                                    label="Last Name"
-                                    variant="outlined"
-                                    onChange={handleInputChange}
-                                    value={emailData?.lastname}
-                                    fullWidth
-                                />
-                            </Grid>
+        <Container>
+            <Form onSubmit={handleSubmit}>
+                <Box sx={styles.container}>
+                    <Typography sx={styles.title} variant="h4" component="h1">
+                        Get in touch.
+                    </Typography>
+                    <Grid container xs={12}>
+                        <Grid item xs={6} sx={{ pr: "5px" }}>
+                            <TextField
+                                name="firstname"
+                                sx={{ mb: "16px" }}
+                                label="First Name"
+                                variant="outlined"
+                                onChange={handleInputChange}
+                                value={emailData?.firstname}
+                                fullWidth
+                            />
                         </Grid>
-                        <TextField
-                            name="email"
-                            sx={styles.input}
-                            label="Email"
-                            type="email"
-                            variant="outlined"
-                            onChange={handleInputChange}
-                            value={emailData?.email}
-                        />
-                        <TextField
-                            name="subject"
-                            sx={styles.input}
-                            label="Subject"
-                            variant="outlined"
-                            onChange={handleInputChange}
-                            value={emailData?.subject}
-                        />
-                        <TextField
-                            name="message"
-                            sx={styles.input}
-                            label="Message"
-                            multiline
-                            rows={8}
-                            variant="outlined"
-                            onChange={handleInputChange}
-                            value={emailData?.message}
-                        />
-                        <Box sx={styles.actionsContainer}>
-                            <Button onSubmit={handleSubmit} sx={styles.sendButton} variant="contained" type="submit">
-                                Submit
-                            </Button>
-                        </Box>
+                        <Grid item xs={6} sx={{ pl: "5px" }}>
+                            <TextField
+                                name="lastname"
+                                sx={{ mb: "16px" }}
+                                label="Last Name"
+                                variant="outlined"
+                                onChange={handleInputChange}
+                                value={emailData?.lastname}
+                                fullWidth
+                            />
+                        </Grid>
+                    </Grid>
+                    <TextField
+                        name="email"
+                        sx={styles.input}
+                        label="Email"
+                        type="email"
+                        variant="outlined"
+                        onChange={handleInputChange}
+                        value={emailData?.email}
+                    />
+                    <TextField
+                        name="subject"
+                        sx={styles.input}
+                        label="Subject"
+                        variant="outlined"
+                        onChange={handleInputChange}
+                        value={emailData?.subject}
+                    />
+                    <TextField
+                        name="message"
+                        sx={styles.input}
+                        label="Message"
+                        multiline
+                        rows={8}
+                        variant="outlined"
+                        onChange={handleInputChange}
+                        value={emailData?.message}
+                    />
+                    <Box sx={styles.actionsContainer}>
+                        <Button onSubmit={handleSubmit} sx={styles.sendButton} variant="contained" type="submit">
+                            Submit
+                        </Button>
                     </Box>
-                </Form>
-            </Container>
-            <Footer />
-        </>
+                </Box>
+            </Form>
+        </Container>
     );
 }
 
@@ -135,7 +131,7 @@ const styles = {
     container: {
         mt: "80px",
         mb: "80px",
-        width: "80vw",
+        width: "80%",
         display: "flex",
         flexDirection: "column",
         textAlign: "left",

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Container, Navigator, QuoteSection } from "./style";
-import Footer from "../../components/Footer";
 
 export default function IntroPage() {
 
@@ -36,23 +35,20 @@ export default function IntroPage() {
     }
 
     return (
-        <>
-            <Container>
-                <Navigator>
-                    <div>
-                        <Link to="/about-me">About Me</Link>
-                        <Link to="/projects">Projects</Link>
-                        <Link to="/contact">Contact</Link>
-                    </div>
-                </Navigator>
-                <QuoteSection>
-                    <div>
-                        <p>{quotes[quoteNumber].message}</p>
-                        <span>- {quotes[quoteNumber].author}</span>
-                    </div>
-                </QuoteSection>
-            </Container>
-            <Footer />
-        </>
+        <Container>
+            <Navigator>
+                <div>
+                    <Link to="/about-me">About Me</Link>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/contact">Contact</Link>
+                </div>
+            </Navigator>
+            <QuoteSection>
+                <div>
+                    <p>{quotes[quoteNumber].message}</p>
+                    <span>- {quotes[quoteNumber].author}</span>
+                </div>
+            </QuoteSection>
+        </Container>
     );
 }
