@@ -35,7 +35,7 @@ export default function ContactPage() {
         setMessage(null);
 
         if (!emailData?.firstname || !emailData?.lastname || !emailData?.email || !emailData?.subject || !emailData?.message) {
-            setMessage({ type: "error", text: "Todos os campos são obrigatórios!" });
+            setMessage({ type: "error", text: "All fields are required!" });
             return;
         }
 
@@ -44,15 +44,15 @@ export default function ContactPage() {
 
             console.log("SUCCESS - ", response.text, response.status);
 
-            setMessage({ type: "success", text: "Email enviado com sucesso!" });
+            setMessage({ type: "success", text: "Email successfully sent!" });
 
         } catch (error: Error | any) {
             console.log("FAILED - ", error);
 
-            setMessage({ type: "error", text: "Aconteceu um erro. Tente novamente." });
+            setMessage({ type: "error", text: "An error has occurred. Try again, please." });
         }
 
-        setMessage({ type: "error", text: "Erro! Tente novamente em alguns segundos." });
+        setMessage({ type: "error", text: "Error! Try again in a few seconds, please." });
     }
 
     return (
@@ -67,7 +67,7 @@ export default function ContactPage() {
                             <TextField
                                 name="firstname"
                                 sx={{ marginBottom: "16px", marginRight: 3 }}
-                                label="Nome"
+                                label="First Name"
                                 variant="outlined"
                                 onChange={handleInputChange}
                                 value={emailData?.firstname}
@@ -75,7 +75,7 @@ export default function ContactPage() {
                             <TextField
                                 name="lastname"
                                 sx={{ marginBottom: "16px", marginLeft: 3 }}
-                                label="Sobrenome"
+                                label="Last Name"
                                 variant="outlined"
                                 onChange={handleInputChange}
                                 value={emailData?.lastname}
@@ -93,7 +93,7 @@ export default function ContactPage() {
                         <TextField
                             name="subject"
                             sx={styles.input}
-                            label="Assunto"
+                            label="Subject"
                             variant="outlined"
                             onChange={handleInputChange}
                             value={emailData?.subject}
@@ -101,7 +101,7 @@ export default function ContactPage() {
                         <TextField
                             name="message"
                             sx={styles.input}
-                            label="Mensagem"
+                            label="Message"
                             multiline
                             rows={8}
                             variant="outlined"
@@ -110,7 +110,7 @@ export default function ContactPage() {
                         />
                         <Box sx={styles.actionsContainer}>
                             <Button onSubmit={handleSubmit} sx={{ padding: 2.5 }} variant="contained" type="submit">
-                                Enviar
+                                Send
                             </Button>
                         </Box>
                     </Box>

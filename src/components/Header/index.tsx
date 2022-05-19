@@ -11,9 +11,9 @@ export default function Header() {
             <MenuContainer>
                 <Menu>
                     <nav>
-                        <Link to="/about-me">Sobre Mim</Link>
-                        <Link to="/projects">Projetos</Link>
-                        <Link to="/contact">Contato</Link>
+                        <Link to="/about-me">About Me</Link>
+                        <Link to="/projects">Projects</Link>
+                        <Link to="/contact">Contact</Link>
                         <div>
                             <a href="https://www.linkedin.com/in/azzolinilucas/" title="LinkedIn">
                                 <LinkedIn sx={{ fontSize: 28, color: "#111" }} />

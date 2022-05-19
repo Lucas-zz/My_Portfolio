@@ -11,10 +11,10 @@ export default function Footer() {
                 </Link>
                 <p>Made with React</p>
             </Logo>
-            <CurrentAddress title="Entre em contato comigo para mais informações">
-                Rua Maringá, 105, Blumenau
+            <CurrentAddress title="Reach me out for more information">
+                Rua Maringá, 105
                 <br></br>
-                Santa Catarina, Brasil
+                Blumenau, Brazil
             </CurrentAddress>
             <ContactInfo>
                 lucasazzollinivieira@gmail.com

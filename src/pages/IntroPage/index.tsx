@@ -40,9 +40,9 @@ export default function IntroPage() {
             <Container>
                 <Navigator>
                     <div>
-                        <Link to="/about-me">Sobre Mim</Link>
-                        <Link to="/projects">Projetos</Link>
-                        <Link to="/contact">Contato</Link>
+                        <Link to="/about-me">About Me</Link>
+                        <Link to="/projects">Projects</Link>
+                        <Link to="/contact">Contact</Link>
                     </div>
                 </Navigator>
                 <QuoteSection>

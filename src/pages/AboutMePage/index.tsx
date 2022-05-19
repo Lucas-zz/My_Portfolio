@@ -5,7 +5,7 @@ export default function AboutMePage() {
     return (
         <>
             <Container>
-                <Title>Sobre Mim</Title>
+                <Title>About Me</Title>
                 <Text>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed ex sed mi vulputate volutpat eget non enim. Donec eget congue nisi. Donec nec lacus ut orci lacinia auctor at nec est. Nunc ac urna ac risus pellentesque tristique. Vestibulum porttitor odio ut ex congue tincidunt. Sed lobortis enim sed dolor consequat, a varius orci lacinia. Duis auctor hendrerit ante, ac ultricies diam lacinia vel. Vivamus fermentum ullamcorper est, vel gravida odio aliquet nec. Ut libero urna, suscipit sit amet purus vel, ullamcorper dignissim arcu. Sed eget est scelerisque, aliquam enim et, semper quam. Donec finibus ex in vestibulum viverra. Integer blandit dolor et porttitor eleifend.
                 </Text>
