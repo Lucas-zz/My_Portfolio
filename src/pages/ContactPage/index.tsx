@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { Box, Button, Divider, Link, TextField, Typography, } from "@mui/material";
+import { useState } from "react";
+import { Box, Button, Grid, TextField, Typography, } from "@mui/material";
 import Footer from "../../components/Footer";
 import useAlert from "../../hooks/useAlert";
 import { Container } from "./style";
 import emailjs from "@emailjs/browser";
 import Form from "../../components/Form";
 
-interface EmailData {
-    firstname: string;
-    lastname: string;
-    email: string;
-    subject: string;
-    message: string;
-}
+// interface EmailData {
+//     firstname: string;
+//     lastname: string;
+//     email: string;
+//     subject: string;
+//     message: string;
+// }
 
 export default function ContactPage() {
 
@@ -26,11 +26,11 @@ export default function ContactPage() {
         message: ""
     });
 
-    function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+    function handleInputChange(e: any) {
         setEmailData({ ...emailData, [e.target.name]: e.target.value });
     }
 
-    async function handleSubmit(e: React.FormEvent) {
+    async function handleSubmit(e: any) {
         e.preventDefault();
         setMessage(null);
 
@@ -40,11 +40,15 @@ export default function ContactPage() {
         }
 
         try {
-            const response = await emailjs.sendForm("gmail", "template_mimbq0t", emailData, "YmtpLwzGpXZlIISa9");
+            const response = await emailjs.send("service_1p88pcp", "template_mimbq0t", {
+                ...emailData
+            }, "YmtpLwzGpXZlIISa9");
 
             console.log("SUCCESS - ", response.text, response.status);
 
             setMessage({ type: "success", text: "Email successfully sent!" });
+
+            return
 
         } catch (error: Error | any) {
             console.log("FAILED - ", error);
@@ -61,26 +65,32 @@ export default function ContactPage() {
                 <Form onSubmit={handleSubmit}>
                     <Box sx={styles.container}>
                         <Typography sx={styles.title} variant="h4" component="h1">
-                            Entre em contato
+                            Get in touch.
                         </Typography>
-                        <Box sx={{ rowGap: 3 }}>
-                            <TextField
-                                name="firstname"
-                                sx={{ marginBottom: "16px", marginRight: 3 }}
-                                label="First Name"
-                                variant="outlined"
-                                onChange={handleInputChange}
-                                value={emailData?.firstname}
-                            />
-                            <TextField
-                                name="lastname"
-                                sx={{ marginBottom: "16px", marginLeft: 3 }}
-                                label="Last Name"
-                                variant="outlined"
-                                onChange={handleInputChange}
-                                value={emailData?.lastname}
-                            />
-                        </Box>
+                        <Grid container xs={12}>
+                            <Grid item xs={6} sx={{ pr: "5px" }}>
+                                <TextField
+                                    name="firstname"
+                                    sx={{ mb: "16px" }}
+                                    label="First Name"
+                                    variant="outlined"
+                                    onChange={handleInputChange}
+                                    value={emailData?.firstname}
+                                    fullWidth
+                                />
+                            </Grid>
+                            <Grid item xs={6} sx={{ pl: "5px" }}>
+                                <TextField
+                                    name="lastname"
+                                    sx={{ mb: "16px" }}
+                                    label="Last Name"
+                                    variant="outlined"
+                                    onChange={handleInputChange}
+                                    value={emailData?.lastname}
+                                    fullWidth
+                                />
+                            </Grid>
+                        </Grid>
                         <TextField
                             name="email"
                             sx={styles.input}
@@ -109,8 +119,8 @@ export default function ContactPage() {
                             value={emailData?.message}
                         />
                         <Box sx={styles.actionsContainer}>
-                            <Button onSubmit={handleSubmit} sx={{ padding: 2.5 }} variant="contained" type="submit">
-                                Send
+                            <Button onSubmit={handleSubmit} sx={styles.sendButton} variant="contained" type="submit">
+                                Submit
                             </Button>
                         </Box>
                     </Box>
@@ -123,24 +133,51 @@ export default function ContactPage() {
 
 const styles = {
     container: {
-        marginTop: "180px",
-        width: "460px",
+        mt: "80px",
+        mb: "80px",
+        width: "80vw",
         display: "flex",
         flexDirection: "column",
-        textAlign: "center",
+        textAlign: "left",
     },
-    title: { marginBottom: "30px" },
+    title: {
+        marginBottom: "50px",
+        fontFamily: [
+            '"Abel"', 'sans-serif'
+        ].join(','),
+    },
     dividerContainer: {
         display: "flex",
         alignItems: "center",
         gap: "8px",
-        marginTop: "16px",
-        marginBottom: "26px",
+        mt: "16px",
+        mb: "26px",
     },
-    input: { marginBottom: "16px" },
+    input: {
+        marginBottom: "16px",
+        '&:placeholder': {
+            fontFamily: [
+                '"Abel"', 'sans-serif'
+            ].join(',')
+        }
+    },
     actionsContainer: {
         display: "flex",
         justifyContent: "flex-end",
         alignItems: "center",
+    },
+    sendButton: {
+        pt: "15px",
+        pb: "15px",
+        pl: "40px",
+        pr: "40px",
+        backgroundColor: "#111",
+        fontFamily: [
+            '"Abel"', 'sans-serif'
+        ].join(','),
+        fontSize: 16,
+        '&:hover': {
+            backgroundColor: "#333"
+        }
     },
 };
