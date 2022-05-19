@@ -12,7 +12,7 @@ export default function Footer() {
                 <p>Made with React</p>
             </Logo>
             <CurrentAddress title="Reach me out for more information">
-                Rua Maringá, 105
+                105 Maringa Street
                 <br></br>
                 Blumenau, Brazil
             </CurrentAddress>

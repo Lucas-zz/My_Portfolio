@@ -35,9 +35,17 @@ const Logo = styled.div`
         font-size: calc((2.2 - 1) * 1.2vw + 1rem);
         font-weight: 400;
         line-height: 34px;
+        
+        margin: 0 0 32px;
+        
         color: #111;
 
-        margin: 0 0 32px;
+        transition: 300ms;
+
+        :hover {
+            transition: 150ms;
+            color: #333;
+        }
     }
 
     p {
@@ -90,8 +98,6 @@ const Socials = styled.div`
         justify-content: flex-end;
         align-items: center;
 
-
-
         & > a {
             display: flex;
             align-items: center;
@@ -104,7 +110,32 @@ const Socials = styled.div`
             :hover {
                 transition: transform 250ms;
                 transform: translateX(1.5px) translateY(-1.5px);
-            }            
+            }
+            
+            & > *{
+
+                transition: 300ms;
+                color: #111;
+
+                :hover {
+                    transition: 150ms;
+                    color: #333;
+                }
+            }
+
+            :first-child > * {
+                :hover {
+                    transition: 150ms;
+                    color: #0072b1;
+                }
+            }
+
+            :nth-child(2) > * {
+                :hover {
+                    transition: 150ms;
+                    color: #1DA1F2;
+                }
+            }
         }
     }
 `;
