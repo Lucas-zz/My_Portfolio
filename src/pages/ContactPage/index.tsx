@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
 import useAlert from "../../hooks/useAlert";
@@ -15,6 +15,11 @@ import Form from "../../components/Form";
 // }
 
 export default function ContactPage() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [window.location]);
 
     const { setMessage } = useAlert();
 

@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import { Container, Text, Title } from "./style";
 
 export default function AboutMePage() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [window.location]);
+
     return (
         <Container>
             <Title>About Me</Title>

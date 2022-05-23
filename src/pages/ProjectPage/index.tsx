@@ -4,8 +4,15 @@ import TrackIt from "../../assets/TrackIt.svg";
 import MyWallet from "../../assets/MyWallet.svg";
 import MegaStore from "../../assets/MegaStore.png";
 import linkr from "../../assets/linkr.svg";
+import { useEffect } from "react";
 
 export default function ProjectPage() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [window.location]);
+
     return (
         <>
             <Container>

@@ -1,8 +1,15 @@
 import { Container, Error, ErrorCode, ErrorMessage, Four } from "./style";
 import deathStar from "../../assets/death-star-404.png";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function NotFoundPage() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [window.location]);
+
     return (
         <>
             <Container>

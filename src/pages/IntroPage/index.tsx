@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Navigator, QuoteSection } from "./style";
 
 export default function IntroPage() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [window.location]);
 
     let quoteNumber = 0;
 
