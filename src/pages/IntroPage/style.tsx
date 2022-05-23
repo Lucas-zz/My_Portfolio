@@ -4,12 +4,12 @@ const Container = styled.main`
     width: 100%;
     min-height: 100vh;
 
-    margin-top: 8vw;
+    margin-top: 6vw;
 `;
 
 const Navigator = styled.section`
     width: 100%;
-    height: 85vh;
+    height: 86vh;
     
     display: flex;
     justify-content: center;
