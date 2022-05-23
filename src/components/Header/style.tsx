@@ -9,7 +9,11 @@ const Container = styled.header`
 
     padding: 2.3vw 4vw;
 
-    background-color: #EAEDED;
+    background-color: #EFEFEF;
+
+    position: fixed;
+    top: 0;
+    z-index: 10;
 `;
 
 const Logo = styled.div`
@@ -35,7 +39,13 @@ const Logo = styled.div`
         :hover {
             color: #333;
         }
+
+        @media(max-width: 767px) {
+            font-size: calc((3 - 1) * 1.2vw + 1rem);
+        }
     }
+
+
 `;
 
 const MenuContainer = styled.div`
@@ -47,6 +57,10 @@ const MenuContainer = styled.div`
 
     * {
         font-family: "Source Code Pro", monospace;
+    }
+
+    @media(max-width: 1024px) {
+        display: none;
     }
 `;
 
@@ -113,9 +127,81 @@ const Menu = styled.div`
     }
 `;
 
+const MobileMenu = styled.div`
+    display: none;
+
+    @media(max-width: 1024px) {
+
+        min-width: 60vw;
+        height: 100vh;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: rgba(238, 238, 238, .95);
+        
+        position: fixed;
+        right: 0;
+        top: 0;
+        
+        z-index: 2;
+        
+        & > a {
+            font-family: "Source Code Pro", monospace;
+            font-size: calc((3 - 1) * 1.2vw + 1rem);
+
+            padding: 50px;
+            
+            :hover {
+                text-decoration: underline;
+                text-decoration-thickness: 3px;
+                text-underline-offset: 6px;
+            }
+        }
+    }
+        
+    @media(max-width: 767px) {
+        width: 100%;
+    }
+`
+
+const ToggleMenu = styled.div`
+    display: none;
+
+    @media(max-width: 1024px) {        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        font-size: 4vw;
+        
+        padding: .75rem;
+        
+        color: #222;
+        background-color: #EEE;
+        
+        cursor: pointer;
+        
+        position: fixed;
+        top: .8vw;
+        right: 1%;
+
+        z-index: 99 !important;
+    }
+
+    @media(max-width: 767px) {
+        font-size: 5vw;
+        top: .9vw;
+    }
+`;
+
 export {
     Container,
     Logo,
     MenuContainer,
     Menu,
+    ToggleMenu,
+    MobileMenu
 }

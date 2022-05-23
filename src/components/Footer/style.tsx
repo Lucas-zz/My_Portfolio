@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 const Container = styled.footer`
     width: 100%;
-    height: 200px;
+    height: 100%;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
     padding: 32px 40px;
 
     margin: 0 auto;
 
-    background-color: #EAEDED;
+    background-color: #EFEFEF;
 
     h3 {
         font-family: "Abel", sans-serif;
@@ -20,6 +20,14 @@ const Container = styled.footer`
 
     p {
         font-family: "Source Code Pro", monospace;
+    }
+    @media(max-width:  767px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 5vw 6vw;
+
+        gap: 10px !important;
     }
 `;
 
@@ -56,6 +64,14 @@ const Logo = styled.div`
 
         margin: 16px 0 0;
     }
+    
+    @media(max-width:  767px) {
+        width: 100%;
+
+        p {
+            display: none;
+        }
+    }
 `;
 
 const CurrentAddress = styled.p`
@@ -69,6 +85,20 @@ const CurrentAddress = styled.p`
     font-weight: 300;
     line-height: 24px;
     color: #111;
+
+    @media(max-width: 1024px) {
+        display: none;
+    }
+    @media(max-width:  767px) {
+        width: 100%;
+        height: 100%;
+
+        display: contents;
+
+        font-size: calc((0.9 - 1) * 1.2vw + 1rem);
+
+        padding-bottom: 10px;
+    }
 `;
 
 const ContactInfo = styled.p`
@@ -78,10 +108,17 @@ const ContactInfo = styled.p`
     justify-content: center;
     align-items: center;
 
-    font-size: calc((1 - 1) * 1.2vw + 1rem);
+    font-size: calc((0.9 - 1) * 1.2vw + 1rem);
     font-weight: 300;
     line-height: 24px;
     color: #111;
+
+    @media(max-width:  767px) {
+        width: 100%;
+        justify-content: flex-start;
+
+        word-wrap: break-word;
+    }
 `;
 
 const Socials = styled.div`
@@ -137,6 +174,12 @@ const Socials = styled.div`
                 }
             }
         }
+    }
+
+    @media(max-width:  767px) {
+        width: 100%;
+
+        padding-top: 32px;
     }
 `;
 

@@ -39,9 +39,9 @@ export default function ContactPage() {
         }
 
         try {
-            const response = await emailjs.send("service_1p88pcp", "template_mimbq0t", {
+            const response = await emailjs.send(process.env.REACT_APP_SERVICE_ID!, process.env.REACT_APP_TEMPLATE_ID!, {
                 ...emailData
-            }, "YmtpLwzGpXZlIISa9");
+            }, process.env.REACT_APP_PUBLIC_KEY!);
 
             console.log("SUCCESS - ", response.text, response.status);
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
                     <Typography sx={styles.title} variant="h4" component="h1">
                         Get in touch.
                     </Typography>
-                    <Grid container xs={12}>
+                    <Grid container>
                         <Grid item xs={6} sx={{ pr: "5px" }}>
                             <TextField
                                 name="firstname"

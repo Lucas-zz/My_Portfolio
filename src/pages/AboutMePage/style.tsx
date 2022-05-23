@@ -9,7 +9,7 @@ const Container = styled.main`
 
     padding: 6.6vmax 4vw;
 
-    margin: 0 auto;
+    margin: 8vw auto;
 
     background-color: #FFF;
 `;
@@ -47,6 +47,14 @@ const Text = styled.p`
     margin-top: 0;
     
     -webkit-font-smoothing: antialiased;
+
+    @media(max-width: 1024px) {
+        width: 80vw;
+    }
+
+    @media(max-width: 767px) {
+        width: 90vw;
+    }    
 
 `;
 

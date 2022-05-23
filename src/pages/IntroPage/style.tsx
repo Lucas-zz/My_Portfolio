@@ -62,6 +62,13 @@ const Navigator = styled.section`
                 
                 filter: brightness(1.5);
             }
+
+            @media(max-width: 767px){
+                font-size: calc((4 - 1) * 2vw + 1rem);
+
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
 `;
@@ -100,6 +107,10 @@ const QuoteSection = styled.section`
     
             text-transform: none;
             text-align: center;
+
+            @media(max-width: 767px) {
+                font-size: calc((2 - 1) * 2vw + 1rem);
+            }
         }
 
         p {

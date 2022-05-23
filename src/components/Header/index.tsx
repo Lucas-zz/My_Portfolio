@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
-import { Container, Logo, Menu, MenuContainer } from "./style";
+import { Container, Logo, Menu, MenuContainer, MobileMenu, ToggleMenu } from "./style";
 import { LinkedIn, GitHub } from '@mui/icons-material';
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Header() {
+
+    const [toggleMenu, setToggleMenu] = useState(false);
+
     return (
         <Container>
             <Logo title="Lucas Azzolini Vieira">
@@ -25,6 +30,21 @@ export default function Header() {
                     </nav>
                 </Menu>
             </MenuContainer>
+            {toggleMenu
+                ?
+                <MobileMenu>
+                    <Link to="/about-me" onClick={() => setToggleMenu(false)}>About Me</Link>
+                    <Link to="/projects" onClick={() => setToggleMenu(false)}>Projects</Link>
+                    <Link to="/contact" onClick={() => setToggleMenu(false)}>Contact</Link>
+                    <ToggleMenu>
+                        <FaTimes onClick={() => setToggleMenu(false)} />
+                    </ToggleMenu>
+                </MobileMenu>
+                :
+                <ToggleMenu>
+                    <FaBars onClick={() => setToggleMenu(true)} />
+                </ToggleMenu>
+            }
         </Container>
     );
 }
