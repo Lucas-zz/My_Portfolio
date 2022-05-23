@@ -8,9 +8,7 @@ const Container = styled.main`
     flex-direction: column;
     align-items: center;
 
-    padding: 12vh 0;
-
-    margin-top: 8vw;
+    margin-top: 22vh;
 
     font-family: "Abel", sans-serif;
 `;

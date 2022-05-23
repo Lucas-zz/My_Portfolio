@@ -3,11 +3,13 @@ import styled from "styled-components";
 const Container = styled.main`
     width: 100%;
     min-height: 100vh;
+
+    margin-top: 8vw;
 `;
 
 const Navigator = styled.section`
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     
     display: flex;
     justify-content: center;
