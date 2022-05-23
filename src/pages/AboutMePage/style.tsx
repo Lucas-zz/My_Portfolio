@@ -47,6 +47,10 @@ const Text = styled.p`
     margin-top: 0;
     
     -webkit-font-smoothing: antialiased;
+    
+    :last-of-type {
+        padding-top: 50px;
+    }
 
     @media(max-width: 1024px) {
         width: 80vw;
