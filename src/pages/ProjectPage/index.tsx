@@ -11,39 +11,49 @@ export default function ProjectPage() {
             <Container>
                 <Grid>
                     <Project>
-                        <Contained>
-                            <Title height={false}>
-                                <img src={globo} alt="globo.com logo" />
-                            </Title>
-                        </Contained>
+                        <a href="https://github.com/Lucas-zz/globo.com">
+                            <Contained>
+                                <Title height={false}>
+                                    <img src={globo} alt="globo.com logo" />
+                                </Title>
+                            </Contained>
+                        </a>
                     </Project>
                     <Project>
-                        <Contained>
-                            <Title height={false}>
-                                <img src={TrackIt} alt="globo.com logo" />
-                            </Title>
-                        </Contained>
+                        <a href="https://github.com/Lucas-zz/Track_It">
+                            <Contained>
+                                <Title height={false}>
+                                    <img src={TrackIt} alt="globo.com logo" />
+                                </Title>
+                            </Contained>
+                        </a>
                     </Project>
                     <Project>
-                        <Contained>
-                            <Title height={true}>
-                                <img src={MyWallet} alt="globo.com logo" />
-                            </Title>
-                        </Contained>
+                        <a href="https://github.com/Lucas-zz/MyWallet_frontEnd">
+                            <Contained>
+                                <Title height={true}>
+                                    <img src={MyWallet} alt="globo.com logo" />
+                                </Title>
+                            </Contained>
+                        </a>
                     </Project>
                     <Project>
-                        <Contained>
-                            <Title height={false}>
-                                <img src={MegaStore} alt="globo.com logo" />
-                            </Title>
-                        </Contained>
+                        <a href="https://github.com/Lucas-zz/mega-store-front">
+                            <Contained>
+                                <Title height={false}>
+                                    <img src={MegaStore} alt="globo.com logo" />
+                                </Title>
+                            </Contained>
+                        </a>
                     </Project>
                     <Project>
-                        <Contained>
-                            <Title height={false}>
-                                <img src={linkr} alt="globo.com logo" />
-                            </Title>
-                        </Contained>
+                        <a href="https://github.com/Lucas-zz/Linkr-Front">
+                            <Contained>
+                                <Title height={false}>
+                                    <img src={linkr} alt="globo.com logo" />
+                                </Title>
+                            </Contained>
+                        </a>
                     </Project>
                     <More>
                         More projects will be added soon!
