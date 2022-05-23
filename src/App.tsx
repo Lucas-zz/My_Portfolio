@@ -19,12 +19,15 @@ const LazyWrapper = (Component: any) => (props: any) => (
 	</Suspense>
 );
 
+
 const IntroPage = LazyWrapper(lazy(() => import("./pages/IntroPage")));
 const AboutMePage = LazyWrapper(lazy(() => import("./pages/AboutMePage")));
 const ProjectPage = LazyWrapper(lazy(() => import("./pages/ProjectPage")));
 const ContactPage = LazyWrapper(lazy(() => import("./pages/ContactPage")));
+const NotFoundPage = LazyWrapper(lazy(() => import("./pages/NotFoundPage")));
 
 function App() {
+
 	return (
 		<>
 			<GlobalStyle />
@@ -37,6 +40,7 @@ function App() {
 						<Route path="/about-me" element={<AboutMePage />} />
 						<Route path="/projects" element={<ProjectPage />} />
 						<Route path="/contact" element={<ContactPage />} />
+						<Route path="*" element={<NotFoundPage />} />
 					</Routes>
 					<Footer />
 				</BrowserRouter>
