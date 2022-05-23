@@ -132,7 +132,7 @@ const MobileMenu = styled.div`
 
     @media(max-width: 1024px) {
 
-        min-width: 60vw;
+        min-width: 50vw;
         height: 100vh;
         
         display: flex;
@@ -150,9 +150,13 @@ const MobileMenu = styled.div`
         
         & > a {
             font-family: "Source Code Pro", monospace;
-            font-size: calc((3 - 1) * 1.2vw + 1rem);
+            font-size: calc((2 - 1) * 1.2vw + 1rem);
 
             padding: 50px;
+
+            :last-of-type {
+                margin-bottom: 50px;
+            }
             
             :hover {
                 text-decoration: underline;
@@ -164,6 +168,10 @@ const MobileMenu = styled.div`
         
     @media(max-width: 767px) {
         width: 100%;
+
+        & > a {
+            font-size: calc((3 - 1) * 1.2vw + 1rem);
+        }
     }
 `
 

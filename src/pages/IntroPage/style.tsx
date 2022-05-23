@@ -77,7 +77,7 @@ const Navigator = styled.section`
 
 const QuoteSection = styled.section`
     width: 100%;
-    height: 60vh;
+    min-height: 60vh;
 
     background-color: #253551;
     color: #FFF;
@@ -115,8 +115,11 @@ const QuoteSection = styled.section`
             }
         }
 
-        p {
-            margin-bottom: 32px;
+        & > p {
+            margin: 30px 0;
+        }
+        & > span {
+            margin-bottom: 30px;
         }
     }
 `;
