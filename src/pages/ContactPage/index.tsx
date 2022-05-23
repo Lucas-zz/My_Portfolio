@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import LoadingButton from '@mui/lab/LoadingButton';
 import useAlert from "../../hooks/useAlert";
 import { Container } from "./style";
 import emailjs from "@emailjs/browser";
@@ -16,6 +17,8 @@ import Form from "../../components/Form";
 export default function ContactPage() {
 
     const { setMessage } = useAlert();
+
+    const [isLoading, setLoading] = useState(false);
 
     const [emailData, setEmailData] = useState<any>({
         firstname: "",
@@ -38,13 +41,18 @@ export default function ContactPage() {
             return;
         }
 
+        setLoading(true);
+
         try {
-            const response = await emailjs.send(process.env.REACT_APP_SERVICE_ID!, process.env.REACT_APP_TEMPLATE_ID!, {
+
+            setLoading(true);
+            const response = await emailjs.send("service_1p88pcp", "template_mimbq0t", {
                 ...emailData
-            }, process.env.REACT_APP_PUBLIC_KEY!);
+            }, "YmtpLwzGpXZlIISa9");
 
             console.log("SUCCESS - ", response.text, response.status);
 
+            setLoading(false);
             setMessage({ type: "success", text: "Email successfully sent!" });
 
             return
@@ -117,9 +125,16 @@ export default function ContactPage() {
                         value={emailData?.message}
                     />
                     <Box sx={styles.actionsContainer}>
-                        <Button onSubmit={handleSubmit} sx={styles.sendButton} variant="contained" type="submit">
-                            Submit
-                        </Button>
+                        {isLoading
+                            ?
+                            <LoadingButton sx={styles.sendButton} loading variant="contained">
+                                Submit
+                            </LoadingButton>
+                            :
+                            <Button onSubmit={handleSubmit} sx={styles.sendButton} variant="contained" type="submit">
+                                Submit
+                            </Button>
+                        }
                     </Box>
                 </Box>
             </Form>
