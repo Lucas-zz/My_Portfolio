@@ -60,7 +60,7 @@ const MUIStyles = {
         pb: "15px",
         pl: "40px",
         pr: "40px",
-        backgroundColor: "#111",
+        backgroundColor: "#253551",
         fontFamily: [
             '"Abel"', 'sans-serif'
         ].join(','),
