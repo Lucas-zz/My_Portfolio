@@ -1,12 +1,11 @@
-import { Box, SxProps } from "@mui/system";
+import { Box, SxProps } from "@mui/material";
 
 const styles: SxProps = {
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: "55px",
-    paddingBottom: "55px",
 };
 
 interface Props {
