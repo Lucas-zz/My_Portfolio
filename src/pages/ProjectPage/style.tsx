@@ -30,7 +30,6 @@ const Grid = styled.section`
 
 const Project = styled.article`
     width: 100%;
-    height: 40vh;
 
     background-color: #EFEFEF;
 
@@ -44,10 +43,13 @@ const Contained = styled.div`
     height: 100%;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    -webkit-filter: grayscale(100%);
+    padding: 30px;
+
+    /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%) blur(2px);
     transition: .3s ease-in-out;
     -webkit-transition:  .3s ease-in-out;
@@ -73,13 +75,13 @@ const Contained = styled.div`
             filter: grayscale(0) blur(0);
             -webkit-transform: scale(1.1);
 	        transform: scale(1.1);
-    }
-    }
+        }   
+    } */
 `;
 
 const Title = styled.div<any>`
     width: 70%;
-    height: 70%;
+    height: 25vh;
 
     display: flex;
     justify-content: center;
@@ -112,11 +114,49 @@ const More = styled.div`
     }
 `;
 
+const Icons = styled.div`
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center;
+
+    padding-bottom: 30px;
+`;
+
+const ContainerButtons = styled.div`
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center;
+`;
+
+const MUIStyles = {
+    button: {
+        pt: "15px",
+        pb: "15px",
+        pl: "40px",
+        pr: "40px",
+        backgroundColor: "#253551",
+        fontFamily: [
+            '"Abel"', 'sans-serif'
+        ].join(','),
+        fontSize: 16,
+        '&:hover': {
+            backgroundColor: "#333"
+        }
+    },
+};
+
 export {
     Container,
     Grid,
     Project,
     Title,
     Contained,
-    More
+    More,
+    MUIStyles,
+    ContainerButtons,
+    Icons
 }
