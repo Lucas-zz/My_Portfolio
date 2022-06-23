@@ -140,7 +140,7 @@ const MobileMenu = styled.div`
         justify-content: center;
         align-items: center;
         
-        background-color: rgba(238, 238, 238, .95);
+        background-color: rgba(37, 53, 81, .95);
         
         position: fixed;
         right: 0;
@@ -154,6 +154,8 @@ const MobileMenu = styled.div`
 
             padding: 50px;
 
+            color: #EFEFEF;
+            
             :last-of-type {
                 margin-bottom: 50px;
             }
@@ -187,9 +189,10 @@ const ToggleMenu = styled.div`
         
         padding: .75rem;
         
-        color: #222;
+        color: #253551;
         background-color: #EEE;
-        
+        border-radius: 50%;
+
         cursor: pointer;
         
         position: fixed;

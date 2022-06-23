@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
 import useAlert from "../../hooks/useAlert";
-import { Container } from "./style";
+import { Container, MUIStyles } from "./style";
 import emailjs from "@emailjs/browser";
 import Form from "../../components/Form";
 
@@ -18,8 +18,7 @@ export default function ContactPage() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [window.location]);
+    }, []);
 
     const { setMessage } = useAlert();
 
@@ -74,8 +73,8 @@ export default function ContactPage() {
     return (
         <Container>
             <Form onSubmit={handleSubmit}>
-                <Box sx={styles.container}>
-                    <Typography sx={styles.title} variant="h4" component="h1">
+                <Box sx={MUIStyles.container}>
+                    <Typography sx={MUIStyles.title} variant="h4" component="h1">
                         Get in touch.
                     </Typography>
                     <Grid container>
@@ -104,7 +103,7 @@ export default function ContactPage() {
                     </Grid>
                     <TextField
                         name="email"
-                        sx={styles.input}
+                        sx={MUIStyles.input}
                         label="Email"
                         type="email"
                         variant="outlined"
@@ -113,7 +112,7 @@ export default function ContactPage() {
                     />
                     <TextField
                         name="subject"
-                        sx={styles.input}
+                        sx={MUIStyles.input}
                         label="Subject"
                         variant="outlined"
                         onChange={handleInputChange}
@@ -121,7 +120,7 @@ export default function ContactPage() {
                     />
                     <TextField
                         name="message"
-                        sx={styles.input}
+                        sx={MUIStyles.input}
                         label="Message"
                         multiline
                         rows={8}
@@ -129,14 +128,14 @@ export default function ContactPage() {
                         onChange={handleInputChange}
                         value={emailData?.message}
                     />
-                    <Box sx={styles.actionsContainer}>
+                    <Box sx={MUIStyles.actionsContainer}>
                         {isLoading
                             ?
-                            <LoadingButton sx={styles.sendButton} loading variant="contained">
+                            <LoadingButton sx={MUIStyles.sendButton} loading variant="contained">
                                 Submit
                             </LoadingButton>
                             :
-                            <Button onSubmit={handleSubmit} sx={styles.sendButton} variant="contained" type="submit">
+                            <Button onSubmit={handleSubmit} sx={MUIStyles.sendButton} variant="contained" type="submit">
                                 Submit
                             </Button>
                         }
@@ -146,54 +145,3 @@ export default function ContactPage() {
         </Container>
     );
 }
-
-const styles = {
-    container: {
-        mt: "80px",
-        mb: "80px",
-        width: "80%",
-        display: "flex",
-        flexDirection: "column",
-        textAlign: "left",
-    },
-    title: {
-        marginBottom: "50px",
-        fontFamily: [
-            '"Abel"', 'sans-serif'
-        ].join(','),
-    },
-    dividerContainer: {
-        display: "flex",
-        alignItems: "center",
-        gap: "8px",
-        mt: "16px",
-        mb: "26px",
-    },
-    input: {
-        marginBottom: "16px",
-        '&:placeholder': {
-            fontFamily: [
-                '"Abel"', 'sans-serif'
-            ].join(',')
-        }
-    },
-    actionsContainer: {
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
-    },
-    sendButton: {
-        pt: "15px",
-        pb: "15px",
-        pl: "40px",
-        pr: "40px",
-        backgroundColor: "#111",
-        fontFamily: [
-            '"Abel"', 'sans-serif'
-        ].join(','),
-        fontSize: 16,
-        '&:hover': {
-            backgroundColor: "#333"
-        }
-    },
-};

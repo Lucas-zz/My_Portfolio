@@ -48,7 +48,7 @@ const Navigator = styled.section`
             text-decoration-line: underline;
             text-decoration-style: solid;
             text-decoration-thickness: 1.5px;
-            text-underline-offset: 1rem;
+            text-underline-offset: 0.5rem;
             text-align: left;
 
             text-shadow: 1.5px .5px #111;
@@ -70,6 +70,8 @@ const Navigator = styled.section`
 
                 padding-left: 0;
                 padding-right: 0;
+
+                text-underline-offset: 0.5rem;
             }
         }
     }
