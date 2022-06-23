@@ -13,6 +13,8 @@ const MainContainer = styled.footer`
     margin: 0 auto;
 
     background-color: #EFEFEF;
+    
+    box-shadow: 2px 2px 5px 3px rgba(57, 63, 72, 0.3);
 
     h3 {
         font-family: "Abel", sans-serif;

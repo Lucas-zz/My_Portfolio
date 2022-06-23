@@ -26,6 +26,7 @@ export default function Footer() {
                         options={defaultOptions}
                         width={46}
                         height={46}
+                        title="ReactJS"
                     />
                 </Container>
             </Logo>

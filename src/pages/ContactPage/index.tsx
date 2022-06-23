@@ -67,7 +67,7 @@ export default function ContactPage() {
             setMessage({ type: "error", text: "An error has occurred. Try again, please." });
         }
 
-        setMessage({ type: "error", text: "Error! Try again in a few seconds, please." });
+        setMessage({ type: "error", text: "Error! Try again in a few moments, please." });
     }
 
     return (
@@ -75,7 +75,7 @@ export default function ContactPage() {
             <Form onSubmit={handleSubmit}>
                 <Box sx={MUIStyles.container}>
                     <Typography sx={MUIStyles.title} variant="h4" component="h1">
-                        Get in touch.
+                        Get in touch :D
                     </Typography>
                     <Grid container>
                         <Grid item xs={6} sx={{ pr: "5px" }}>

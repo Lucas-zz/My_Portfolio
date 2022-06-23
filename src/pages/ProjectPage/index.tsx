@@ -1,67 +1,70 @@
-import { Contained, Container, Grid, More, Project, Title } from "./style";
-import globo from "../../assets/globo.svg"
-import TrackIt from "../../assets/TrackIt.svg";
-import MyWallet from "../../assets/MyWallet.svg";
-import MegaStore from "../../assets/MegaStore.png";
-import linkr from "../../assets/linkr.svg";
+import {
+    Contained,
+    Container,
+    ContainerButtons,
+    Grid,
+    Icons,
+    More,
+    MUIStyles,
+    Project,
+    Title,
+    Icon,
+    ProjectLogo
+} from "./style";
 import { useEffect } from "react";
+import { Button, Typography } from "@mui/material";
+
+import PostgreSQL from '../../assets/postgresql.svg';
+
+import Lottie from 'react-lottie';
+import { projects } from "../../utils/projectUtils";
 
 export default function ProjectPage() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [window.location]);
+    }, []);
 
     return (
         <>
             <Container>
+                <Title>Projects</Title>
                 <Grid>
-                    <Project>
-                        <a href="https://github.com/Lucas-zz/globo.com">
+                    {projects.map((project) => (
+                        <Project key={project.id}>
                             <Contained>
-                                <Title height={false}>
-                                    <img src={globo} alt="globo.com logo" />
-                                </Title>
+                                <ProjectLogo>
+                                    <img src={project.image} alt={project.name} />
+                                </ProjectLogo>
+                                <Typography variant="subtitle1" sx={MUIStyles.typography}>Developed with</Typography>
+                                <Icons>
+                                    <Icon>
+                                        {project.technologies.map((tech: any) => (
+                                            tech === PostgreSQL ?
+                                                <img title="PostgreSQL" src={tech} alt="PostgreSQL database" />
+                                                :
+                                                <Lottie
+                                                    title={tech.title}
+                                                    options={tech}
+                                                />
+                                        ))}
+                                    </Icon>
+                                </Icons>
+                                <ContainerButtons>
+                                    <a href={project.repoUrl} target="_blank" rel="noreferrer">
+                                        <Button sx={MUIStyles.button} variant="contained">
+                                            Repository
+                                        </Button>
+                                    </a>
+                                    <a href={project.appUrl} target="_blank" rel="noreferrer">
+                                        <Button sx={MUIStyles.button} variant="contained">
+                                            Application
+                                        </Button>
+                                    </a>
+                                </ContainerButtons>
                             </Contained>
-                        </a>
-                    </Project>
-                    <Project>
-                        <a href="https://github.com/Lucas-zz/Track_It">
-                            <Contained>
-                                <Title height={false}>
-                                    <img src={TrackIt} alt="globo.com logo" />
-                                </Title>
-                            </Contained>
-                        </a>
-                    </Project>
-                    <Project>
-                        <a href="https://github.com/Lucas-zz/MyWallet_frontEnd">
-                            <Contained>
-                                <Title height={true}>
-                                    <img src={MyWallet} alt="globo.com logo" />
-                                </Title>
-                            </Contained>
-                        </a>
-                    </Project>
-                    <Project>
-                        <a href="https://github.com/Lucas-zz/mega-store-front">
-                            <Contained>
-                                <Title height={false}>
-                                    <img src={MegaStore} alt="globo.com logo" />
-                                </Title>
-                            </Contained>
-                        </a>
-                    </Project>
-                    <Project>
-                        <a href="https://github.com/Lucas-zz/Linkr-Front">
-                            <Contained>
-                                <Title height={false}>
-                                    <img src={linkr} alt="globo.com logo" />
-                                </Title>
-                            </Contained>
-                        </a>
-                    </Project>
+                        </Project>
+                    ))}
                     <More>
                         More projects will be added soon!
                     </More>
