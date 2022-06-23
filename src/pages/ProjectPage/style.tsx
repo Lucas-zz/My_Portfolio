@@ -8,6 +8,34 @@ const Container = styled.main`
     margin: 8vw auto;
 `;
 
+const Title = styled.h2`
+    font-family: "Abel", sans-serif;
+
+    font-size: calc((2.8 - 1) * 1.2vw + 1rem);
+    font-weight: 400;
+    letter-spacing: 0em;
+    
+    text-transform: none;
+    text-shadow: 2.5px 2.5px 1px rgba(57, 63, 72, 0.3);
+    text-align: center;
+    
+    white-space: pre-wrap;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+    @media(max-width: 1024px) {
+        font-size: calc((2.8 - 1) * 2vw + 1rem);
+        padding-bottom: 80px;
+    }
+
+    @media(max-width: 767px) {
+        font-size: calc((1.2 - 1) * 20vw + 1rem);
+        padding-bottom: 60px;
+    }
+`;
+
 const Grid = styled.section`
     width: 100%;
     min-height: 100%;
@@ -16,15 +44,12 @@ const Grid = styled.section`
     grid-template-columns: 45% 45%;
     justify-content: space-evenly;
 
-    padding-top: 2%;
-
     @media(max-width: 1024px) {
         grid-template-columns: 80%;
     }
 
     @media(max-width: 767px) {
         grid-template-columns: 100%;
-        padding-top: 10%;
     }
 `;
 
@@ -33,21 +58,37 @@ const Project = styled.article`
 
     background-color: #EFEFEF;
 
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
     
     margin: 5% 0;
+
+    padding: 30px;
+
+    box-shadow: 2px 2px 10px rgba(57, 63, 72, 0.3);
+
+    @media(max-width: 767px) {
+        border-radius: 0;
+        padding: 0;
+    }
 `;
 
 const Contained = styled.div`
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 90%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    padding: 30px;
+    @media(max-width: 767px) {
+        width: 100%;
+        padding: 30px 0;
+    }
 
     /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%) blur(2px);
@@ -79,7 +120,7 @@ const Contained = styled.div`
     } */
 `;
 
-const Title = styled.div<any>`
+const ProjectLogo = styled.div<any>`
     width: 70%;
     height: 25vh;
 
@@ -88,10 +129,15 @@ const Title = styled.div<any>`
     align-items: center;
 
     & > img {
-        width: 60%;
-        height: 60%;
+        width: 70%;
+        height: 70%;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media(max-width: 767px) {
+            width: 90%;
+            height: 90%;
+        }
     }
 `;
 
@@ -118,10 +164,27 @@ const Icons = styled.div`
     width: 100%;
 
     display: flex;
-    justify-content: space-evenly !important;
+    justify-content: space-evenly;
     align-items: center;
 
-    padding-bottom: 30px;
+    padding-bottom: 60px;
+`;
+
+const Icon = styled.div`
+    height: 66px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    gap: 2%;
+
+    @media(max-width: 767px) {
+        height: 55px;
+        gap: 10px;
+    }
 `;
 
 const ContainerButtons = styled.div`
@@ -130,14 +193,16 @@ const ContainerButtons = styled.div`
     display: flex;
     justify-content: space-evenly !important;
     align-items: center;
+
+    gap: 20px;
 `;
 
 const MUIStyles = {
     button: {
         pt: "15px",
         pb: "15px",
-        pl: "40px",
-        pr: "40px",
+        pl: "5vw",
+        pr: "5vw",
         backgroundColor: "#253551",
         fontFamily: [
             '"Abel"', 'sans-serif'
@@ -147,6 +212,16 @@ const MUIStyles = {
             backgroundColor: "#333"
         }
     },
+    title: {
+        marginBottom: "50px",
+        fontFamily: [
+            '"Abel"', 'sans-serif'
+        ].join(','),
+    },
+    typography: {
+        marginTop: "30px",
+        textShadow: "1px 1px 1px rgba(57, 63, 72, 0.3)"
+    }
 };
 
 export {
@@ -158,5 +233,7 @@ export {
     More,
     MUIStyles,
     ContainerButtons,
-    Icons
+    Icons,
+    Icon,
+    ProjectLogo
 }
