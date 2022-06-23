@@ -38,17 +38,17 @@ export default function AboutMePage() {
                 Communication Protocols, PLCs, etc.
             </Text>
             <Text>
-                In the final moments of my graduation, I felt that I was no longer
-                enjoying the future that Control and Automation would bring me.
-                Therefore, I chose to start a new degree in Full-Stack Web Development,
-                where I had contact, again, with HTML5, CSS3 and other technologies,
-                such as: JavaScript ES6, Git, ReactJS, Express, NodeJS, MongoDB (NoSQL),
-                Applications, PostgreSQL, REST, Typescript, Automated Tests (Jest, Cypress),
-                Prism, etc. In addition, I took classes for personal and interpersonal
-                development where I learned to communicate better, have self-knowledge,
-                time planning, create habits, know how to give and receive feedback,
-                have emotional intelligence and how to work in a team using agile
-                methodologies (Scrum), Slack, GitHub, Trello, Zoom, etc.
+                In the final moments of my graduation, I felt that I was no longer enjoying
+                the future that Control and Automation would bring me. Therefore, I chose
+                to start a new degree in Full-Stack Web Development, where I had contact,
+                again, with HTML5, CSS3 and other technologies, such as: JavaScript ES6,
+                Git, ReactJS, Express, NodeJS, MongoDB (NoSQL), Applications Architecture,
+                PostgreSQL, REST APIs, Typescript, Automated Tests (Jest, Cypress), PrismaORM,
+                etc. In addition, I took classes for personal and interpersonal development
+                where I learned to communicate better, have self-knowledge, time planning,
+                create habits, know how to give and receive feedback, have emotional intelligence
+                and how to work in a team using agile methodologies (Scrum), Slack, GitHub,
+                Trello, Zoom, etc.
             </Text>
             <Text>
                 After months of studies, I learned enough to work confidently with
