@@ -20,9 +20,11 @@ const Title = styled.h2`
     font-size: calc((2.8 - 1) * 1.2vw + 1rem);
     font-weight: 400;
     letter-spacing: 0em;
-    text-transform: none;
 
+    text-transform: none;
+    text-shadow: 2.5px 2.5px 1px rgba(57, 63, 72, 0.3);
     text-align: center;
+    
     white-space: pre-wrap;
 
     padding-bottom: 6.6vmax;
